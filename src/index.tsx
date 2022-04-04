@@ -4,16 +4,19 @@ import { UseWalletProvider } from "use-wallet";
 import "./index.css";
 import App from "./pages/app";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import reportWebVitals from "./reportWebVitals";
+import { Container } from "@mui/material";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <UseWalletProvider>
-      <ToastContainer />
-      <App />
-    </UseWalletProvider>
-  </React.StrictMode>,
+  <Container sx={{backgroundColor: "#15081D", color: "white"}} maxWidth="lg">
+    <React.StrictMode>
+      <UseWalletProvider>
+        <ToastContainer />
+        <App />
+      </UseWalletProvider>
+    </React.StrictMode>
+  </Container>,
   document.getElementById("root")
 );
 
