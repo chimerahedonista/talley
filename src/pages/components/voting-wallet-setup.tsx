@@ -7,12 +7,12 @@ export interface Props {
   headerText: string;
 }
 
-const RightPanel = (props: Props) => {
+const VotingWalletSetup = (props: Props) => {
   const { headerText } = props;
   return (
     <Card sx={{ minWidth: "100%", backgroundColor: "#202230", color: "white", borderRadius: 5 }} variant="outlined">
       <CardContent>
-        <Header variant="h4">Your Voting Wallet</Header>
+        <Header variant="h5">{headerText}</Header>
         <HeaderDetailCard variantHeader="h6" variantDetails="h4" header="xSUSHI / SUSHI-ETH balance" details="0.000000000" />
         <HeaderDetailCard
           variantHeader="h5"
@@ -26,4 +26,4 @@ const RightPanel = (props: Props) => {
   );
 };
 
-export default RightPanel;
+export default VotingWalletSetup;
