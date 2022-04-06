@@ -1,8 +1,7 @@
-import { Button, Card, CardContent, Grid } from "@mui/material";
+import { Card, CardContent, Grid } from "@mui/material";
 import React from "react";
 import { Proposal } from "src/utils/dto";
 import Header from "./header";
-import HeaderDetailCard from "./header-detail-card";
 import ProgressWithLabel from "./progress-with-label";
 import Status from "./status";
 import TimeRemaining from "./time-remaining";

@@ -21,6 +21,13 @@ const AllRoutes = () => {
               </Typography>
             </Link>
           </li>
+          <li>
+            <Link to="/govlead">
+              <Typography variant="h6" color="white">
+                Governance Leaderboard
+              </Typography>
+            </Link>
+          </li>          
         </ul>
       </nav>
       <Outlet />
