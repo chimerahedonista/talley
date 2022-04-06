@@ -67,7 +67,7 @@ const ActiveProposals = (props: Props) => {
                 <Grid item xs={5}>
                   <ProgressWithLabel color="success" label="For" value={proposal.votes.for} />
                   <ProgressWithLabel color="error" label="Against" value={proposal.votes.against} />
-                  <ProgressWithLabel color="warning" label="Abstain" value={proposal.votes.against} />
+                  <ProgressWithLabel color="warning" label="Abstain" value={proposal.votes.abstain} />
                 </Grid>
               </Grid>
             </CardContent>
