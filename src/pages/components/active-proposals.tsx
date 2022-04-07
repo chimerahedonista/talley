@@ -1,7 +1,5 @@
 import { Button, Card, CardContent, Grid } from "@mui/material";
-import React, { Fragment, useState } from "react";
-import { useDataContext } from "src/hooks/DataContext";
-import Proposal from "../proposal";
+import React, { Fragment } from "react";
 import Header from "./header";
 import ProgressWithLabel from "./progress-with-label";
 import Status from "./status";

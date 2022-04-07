@@ -16,6 +16,11 @@ code {
   border: none !important;
 }
 
+.no-hover {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
 .grey-card {
   min-width: 100% !important;
   background-color: #202230 !important;

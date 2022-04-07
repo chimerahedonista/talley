@@ -1,6 +1,5 @@
 import { Card, CardContent, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import React, { Fragment } from "react";
-import ActiveProposals from "./components/active-proposals";
 import GovernanceStats from "./components/governance-stats";
 import Header from "./components/header";
 
@@ -18,7 +17,7 @@ const GovernanceLeaderboard = () => {
 
   return (
     <Fragment>
-      <Header variant="h2">Governance Overview</Header>
+      <Header variant="h3">Governance Overview</Header>
       <Grid container spacing={2} style={{ marginTop: "20px" }}>
         <Grid item xs={4}>
           <GovernanceStats />

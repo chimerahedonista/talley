@@ -25,7 +25,7 @@ const GovernanceOverview = () => {
     <Fragment>
       {!showProposal ? (
         <Fragment>
-          <Header variant="h2">Governance Overview</Header>
+          <Header variant="h3">Governance Overview</Header>
           <Grid container spacing={2} style={{ marginTop: "20px" }}>
             <Grid item xs={4}>
               <GovernanceStats />

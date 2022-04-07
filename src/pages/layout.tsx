@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { DataContextProvider } from "src/hooks/DataContext";
 import { useData } from "src/hooks/useData";

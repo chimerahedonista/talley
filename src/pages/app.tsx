@@ -25,7 +25,7 @@ const App = () => {
     <Fragment>
       {!showProposal ? (
         <Fragment>
-          <Header variant="h2">Sushi Governance</Header>
+          <Header variant="h3">Sushi Governance</Header>
           <Grid container spacing={2} style={{ marginTop: "20px" }}>
             <Grid item xs={4}>
               <VotingWalletSetup headerText="Your Voting Wallet" />

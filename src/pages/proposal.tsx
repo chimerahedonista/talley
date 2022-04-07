@@ -52,7 +52,7 @@ const Proposal = (props: Props) => {
 
           <Grid container spacing={5} style={{ marginTop: "1px" }}>
             <Grid item xs={4}>
-              <ForAgainstCard />
+              <ForAgainstCard votersFor={data.voters.for} votersAgainst={data.voters.against} />
             </Grid>
           </Grid>
         </Fragment>

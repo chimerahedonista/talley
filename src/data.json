@@ -18,29 +18,36 @@
       "voters": {
         "for": [
           {
-            "address": "0x729F19e4C405758C93F59E5f098190cB2382d883"
+            "address": "0x729F19e4C405758C93F59E5f098190cB2382d883",
+            "votes": 123321
           },
           {
-            "address": "0x5F6D18DBB061fC103d8090c094aF3Fb45Da338c9"
+            "address": "0x5F6D18DBB061fC103d8090c094aF3Fb45Da338c9",
+            "votes": 324124
           },
           {
-            "address": "0x2CC8B21D9FD583b211c5C3369A444D564FE8000a"
+            "address": "0x2CC8B21D9FD583b211c5C3369A444D564FE8000a",
+            "votes": 243123
           },
           {
-            "address": "0xFfbE28b3093C9bFe05f2dB03f0dAc1356949D7e6"
+            "address": "0xFfbE28b3093C9bFe05f2dB03f0dAc1356949D7e6",
+            "votes": 432123
           }
         ],
         "against": [
           {
-            "address": "0x76B4aa9Fc4d351a0062c6af8d186DF959D564A84"
+            "address": "0x76B4aa9Fc4d351a0062c6af8d186DF959D564A84",
+            "votes": 412341
           },
           {
-            "address": "0xac706cE8A9BF27Afecf080fB298d0ee13cfb978A"
+            "address": "0xac706cE8A9BF27Afecf080fB298d0ee13cfb978A",
+            "votes": 90890
           }
         ],
         "abstain": [
           {
-            "address": "0xe04AB39684A24D8D4124b114F3bd6FBEB779cacA"
+            "address": "0xe04AB39684A24D8D4124b114F3bd6FBEB779cacA",
+            "votes": 99090
           }
         ]
       },
