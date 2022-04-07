@@ -6,7 +6,7 @@ export interface Props {
 }
 // TODO: Calculate time remaining properly in days and hours
 const TimeRemaining = (props: Props) => {
-  return <span>6 Days Remaining</span>;
+  return <Button color="error" variant="outlined" sx={{cursor: "none", pointerEvents: "none"}}>6 Days Remaining</Button>;
 };
 
 export default TimeRemaining;

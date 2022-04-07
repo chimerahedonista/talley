@@ -42,7 +42,7 @@ export interface Props {
 const HeaderDetailCard = (props: Props) => {
   const { header, details } = props;
   return (
-    <Card sx={{ minWidth: "100%", backgroundColor: "#15081D", color: "white", border: 1, borderRadius: 5, marginTop: "10px" }} variant="outlined">
+    <Card className="purple-card with-margin with-border" variant="outlined">
       <CardContent>
         <Header color="#A8A8A8" variant={props.variantHeader}>
           {header}

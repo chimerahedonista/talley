@@ -9,7 +9,7 @@ import { Container } from "@mui/material";
 import Layout from "./pages/layout";
 
 ReactDOM.render(
-  <Container sx={{backgroundColor: "#15081D", color: "white"}} maxWidth="lg">
+  <Container sx={{backgroundColor: "#15081D", color: "white"}} maxWidth="xl">
     <React.StrictMode>
       <UseWalletProvider>
         <ToastContainer />

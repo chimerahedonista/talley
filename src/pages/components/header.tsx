@@ -1,6 +1,5 @@
 import React from 'react'
 import Typography from '@mui/material/Typography';
-import { color } from '@mui/system';
 
 
 export interface Props {

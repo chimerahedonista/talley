@@ -15,6 +15,9 @@ const Status = (props: Props) => {
         case "REVIEW":
           setColor("warning");
           break;
+        case "PENDING":
+          setColor("info");
+          break;
         default:
           setColor("success");
       }
@@ -22,7 +25,7 @@ const Status = (props: Props) => {
   }, [status]);
 
   return (
-      <Button variant="contained" color={color} size="small">
+      <Button variant="contained" color={color} size="small" sx={{cursor: "none", pointerEvents: "none"}}>
           {status}
       </Button>
   );

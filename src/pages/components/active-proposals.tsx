@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, Grid } from "@mui/material";
-import React from "react";
+import React, { Fragment, useState } from "react";
 import { useDataContext } from "src/hooks/DataContext";
+import Proposal from "../proposal";
 import Header from "./header";
 import ProgressWithLabel from "./progress-with-label";
 import Status from "./status";
@@ -9,19 +10,20 @@ import User from "./user";
 
 export interface Props {
   headerText: string;
+  showProposalPanel: (data: any) => void;
+  proposals: any;
 }
 
 const ActiveProposals = (props: Props) => {
-  const proposals: Array<any> = useDataContext();
-
-  const { headerText } = props;
+  const { headerText, showProposalPanel, proposals } = props;
   return (
-    <Card sx={{ minWidth: "100%", backgroundColor: "#202230", color: "white", borderRadius: 5, marginBottom: "20px" }} variant="outlined">
-      <CardContent>
-        <Header variant="h5">{headerText}</Header>
-        {proposals.map((proposal) => (
-          <Card
-            sx={{ minWidth: "100%", backgroundColor: "#15081D", color: "white", borderRadius: 5, marginTop: "10px" }}
+    <Fragment>
+      <Card className="grey-card" variant="outlined">
+        <CardContent>
+          <Header variant="h5">{headerText}</Header>
+          {proposals.map((proposal: any) => (
+            <Card
+            className="purple-card with-margin"
             variant="outlined"
             key={proposal.id}>
             <CardContent>
@@ -35,39 +37,46 @@ const ActiveProposals = (props: Props) => {
                       <Status status={proposal.status} />
                     </Grid>
 
-                    <Grid item xs={12}>
-                      <Header variant="h4">{proposal.title}</Header>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <Header variant="body1">{proposal.description}</Header>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <TimeRemaining timeRemaining={proposal.timeRemaining} />
-                    </Grid>
-                    <Grid item xs={12}>
-                      <Button color="secondary" variant="contained" fullWidth>
-                        Show Details
-                      </Button>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <User address={proposal.proposedBy} />
+                      <Grid item xs={12}>
+                        <Header variant="h4">{proposal.title}</Header>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Header variant="body1">{proposal.description}</Header>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <TimeRemaining timeRemaining={proposal.timeRemaining} />
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Button
+                          color="secondary"
+                          variant="contained"
+                          fullWidth
+                          onClick={() => {
+                            showProposalPanel(proposal);
+                          }}>
+                          Show Details
+                        </Button>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <User address={proposal.proposedBy} marginTop="20px" />
+                      </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
 
-                <Grid item xs={1} sx={{ borderLeft: "1px solid grey" }}></Grid>
+                  <Grid item xs={1} sx={{ borderLeft: "1px solid grey" }}></Grid>
 
-                <Grid item xs={5}>
-                  <ProgressWithLabel color="success" label="For" value={proposal.votes.for} />
-                  <ProgressWithLabel color="error" label="Against" value={proposal.votes.against} />
-                  <ProgressWithLabel color="warning" label="Abstain" value={proposal.votes.abstain} />
+                  <Grid item xs={5}>
+                    <ProgressWithLabel color="success" label="For" value={proposal.votes.for} />
+                    <ProgressWithLabel color="error" label="Against" value={proposal.votes.against} />
+                    <ProgressWithLabel color="warning" label="Abstain" value={proposal.votes.abstain} />
+                  </Grid>
                 </Grid>
-              </Grid>
-            </CardContent>
-          </Card>
-        ))}
-      </CardContent>
-    </Card>
+              </CardContent>
+            </Card>
+          ))}
+        </CardContent>
+      </Card>
+    </Fragment>
   );
 };
 

@@ -5,7 +5,7 @@ import HeaderDetailCard from './header-detail-card'
 
 const GovernanceStats = () => {
   return (
-    <Card sx={{ minWidth: "100%", backgroundColor: "#202230", color: "white", borderRadius: 5 }} variant="outlined">
+    <Card className='grey-card' variant="outlined">
       <CardContent>
         <Header variant="h5">Governance Stats</Header>
         <HeaderDetailCard variantHeader="h6" variantDetails="h4" header="SUSHI REMAINING" details="45,123,456" />
