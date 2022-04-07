@@ -1,6 +1,6 @@
-import { Card, CardContent, Grid } from "@mui/material";
+import { Button, Card, CardContent, Grid } from "@mui/material";
 import React from "react";
-import { Proposal } from "src/utils/dto";
+import { useDataContext } from "src/hooks/DataContext";
 import Header from "./header";
 import ProgressWithLabel from "./progress-with-label";
 import Status from "./status";
@@ -12,36 +12,24 @@ export interface Props {
 }
 
 const ActiveProposals = (props: Props) => {
-  const proposals: Array<Proposal> = [
-    {
-      id: "#080",
-      status: "REVIEW",
-      title: "Sushi Treasury Multisig Relection",
-      description:
-        "This proposal is the bi-yearly reelection of the treasury multisigatory. The proposal outlines a selective candidates to oversee the treasury of Sushiswap.....",
-      timeRemaining: 100000000,
-      proposedBy: "0x34234234234234234234",
-      details: "",
-      votes: {
-        for: 40,
-        against: 35,
-        abstain: 25,
-      },
-    },
-  ];
+  const proposals: Array<any> = useDataContext();
+
   const { headerText } = props;
   return (
     <Card sx={{ minWidth: "100%", backgroundColor: "#202230", color: "white", borderRadius: 5, marginBottom: "20px" }} variant="outlined">
       <CardContent>
         <Header variant="h5">{headerText}</Header>
         {proposals.map((proposal) => (
-          <Card sx={{ minWidth: "100%", backgroundColor: "#15081D", color: "white", borderRadius: 5, marginTop: "10px" }} variant="outlined">
+          <Card
+            sx={{ minWidth: "100%", backgroundColor: "#15081D", color: "white", borderRadius: 5, marginTop: "10px" }}
+            variant="outlined"
+            key={proposal.id}>
             <CardContent>
               <Grid container spacing={5} style={{ marginTop: "20px" }}>
-                <Grid item xs={6} sx={{padding: "5px"}}>
+                <Grid item xs={6} sx={{ padding: "5px" }}>
                   <Grid container spacing={2}>
                     <Grid item xs={6} sx={{ float: "left" }}>
-                      {proposal.id}
+                      #{proposal.id}
                     </Grid>
                     <Grid item xs={6} sx={{ float: "right" }}>
                       <Status status={proposal.status} />
@@ -55,6 +43,11 @@ const ActiveProposals = (props: Props) => {
                     </Grid>
                     <Grid item xs={12}>
                       <TimeRemaining timeRemaining={proposal.timeRemaining} />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Button color="secondary" variant="contained" fullWidth>
+                        Show Details
+                      </Button>
                     </Grid>
                     <Grid item xs={12}>
                       <User address={proposal.proposedBy} />

@@ -1,0 +1,56 @@
+{
+  "proposals": [
+    {
+      "creator": "0xe04AB39684A24D8D4124b114F3bd6FBEB779cacA",
+      "id": 1,
+      "status": "REVIEW",
+      "title": "Sushi Treasury Multisig Reflection",
+      "description": "This proposal is the bi-yearly reelection of the treasury multisigatory. The proposal outlines a selective candidates to oversee the treasury of Sushiswap",
+      "details": "This proposal’s expectation is to produce a community signal on a grant. Full details and discussions thus far can be found at:<br/><br/>https://forum.sushi.com/t/updated-proposal-community-enabled-analytics-for-sushi/6127<br/><br/>A previous snapshot vote on this topic can be reviewed at: https://snapshot.org/#/sushigov.eth/proposal/QmcwEVRfidkg5U8n3Z9CWgZfb63Fdy9Gy3BPX9z6xZL7nr<br/><br/>Year 1 Program Expectations:<br/><br/>Given the pilot program data, the expected results from a year of bounties would be as follows:<br/><br/>~ Overhaul of Sushi website analytics page (multi-chain coverage)<br/><br/>~ Analytics on key Sushi product lines<br/><br/>~ 460 new active, engaged community members [acquisition]<br/><br/>~ 27,000 SUSHI retained in ecosystem [retention]<br/><br/>~ 350+ unique dashboards, queries, visualizations, & in-depth analyses, and premium interactive solutions.<br/><br/>Grant Request: $1M Annually<br/><br/>→ 50% of this will be delivered to ecosystem community members as bounties ($41,667 per month)<br/><br/>→ The other 50% ($41,667 per month) is Flipside’s Fee To Operate the Program<br/><br/>Oversight Committee: Purpose is to ensure that the grant proceeds are applied in a manner consistent with its design. The Committee will meet and take a vote annually to evaluate the continuation of the program.<br/>",
+      "votes": {
+        "for": 40,
+        "against": 35,
+        "abstain": 25
+      },
+      "stage": "Review",
+      "startDate": 1649306798936,
+      "endDate": 1649306808936,
+      "voters": {
+        "for": [
+          {
+            "address": "0x729F19e4C405758C93F59E5f098190cB2382d883"
+          },
+          {
+            "address": "0x5F6D18DBB061fC103d8090c094aF3Fb45Da338c9"
+          },
+          {
+            "address": "0x2CC8B21D9FD583b211c5C3369A444D564FE8000a"
+          },
+          {
+            "address": "0xFfbE28b3093C9bFe05f2dB03f0dAc1356949D7e6"
+          }
+        ],
+        "against": [
+          {
+            "address": "0x76B4aa9Fc4d351a0062c6af8d186DF959D564A84"
+          },
+          {
+            "address": "0xac706cE8A9BF27Afecf080fB298d0ee13cfb978A"
+          }
+        ],
+        "abstain": [
+          {
+            "address": "0xe04AB39684A24D8D4124b114F3bd6FBEB779cacA"
+          }
+        ]
+      },
+      "history": {
+        "created": 1649306797936,
+        "active": 1649306797936,
+        "succeeded": 1649306797936,
+        "queued": 1649306797936,
+        "executed": 1649306797936
+      }
+    }
+  ]
+}

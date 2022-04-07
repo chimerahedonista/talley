@@ -1,16 +1,12 @@
-import { Button } from '@mui/material'
-import React from 'react'
+import { Button } from "@mui/material";
+import React from "react";
 
 export interface Props {
-    timeRemaining: number;
+  timeRemaining: number;
 }
 // TODO: Calculate time remaining properly in days and hours
 const TimeRemaining = (props: Props) => {
-  return (
-    <Button color='secondary' variant='contained'>
-        6Days, 8Hours
-    </Button>
-  )
-}
+  return <span>6 Days Remaining</span>;
+};
 
 export default TimeRemaining;
