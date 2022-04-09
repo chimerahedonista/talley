@@ -40,7 +40,7 @@ const Proposal = (props: Props) => {
                     <Status status={data.status} />
                   </Grid>
                   <Grid item xs={4}>
-                    <TimeRemaining timeRemaining={1000} />
+                    <TimeRemaining showRedButton={true} proposal={data} showProposalPanel={(data) => {}} timeRemaining={1000} />
                   </Grid>
                 </Grid>
               </Header>

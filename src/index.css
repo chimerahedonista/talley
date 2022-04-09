@@ -58,3 +58,13 @@ code {
 .greyed-out {
   color: grey !important;
 }
+
+.no-decoration {
+  text-decoration: none;
+  color: white;
+  cursor: hand;
+}
+
+.no-decoration:hover {
+  color: grey;
+}

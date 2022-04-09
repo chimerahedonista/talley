@@ -2,7 +2,7 @@ import { cloneDeep } from "lodash";
 import Data from "../data.json";
 
 export const useData = () => {
-  const statuses = ["REVIEW", "PENDING", "LIVE"];
+  const statuses = ["REVIEW", "PENDING", "LIVE", "PASSED", "FAILED"];
   const stages = ["Review", "Pending", "Live"];
 
   const populated = Data.proposals.flatMap((x) => Array.from({ length: 10 }).fill(x));

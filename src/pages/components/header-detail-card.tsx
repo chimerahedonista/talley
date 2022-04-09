@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card, CardContent } from "@mui/material";
 import Header from "./header";
+import { Link } from "react-router-dom";
 
 export interface Props {
   header: string;
@@ -49,9 +50,11 @@ const HeaderDetailCard = (props: Props) => {
         </Header>
         <Header variant={props.variantDetails}>{details}</Header>
         {props.action && (
-          <Button variant="contained" color="secondary" fullWidth sx={{ marginTop: "10px" }}>
-            {props.action}
-          </Button>
+          <Link to="/govover">
+            <Button variant="contained" color="secondary" fullWidth sx={{ marginTop: "10px" }}>
+              {props.action}
+            </Button>
+          </Link>
         )}
       </CardContent>
     </Card>

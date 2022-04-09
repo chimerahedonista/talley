@@ -42,18 +42,7 @@ const ActiveProposals = (props: Props) => {
                         <Header variant="body1">{proposal.description}</Header>
                       </Grid>
                       <Grid item xs={12}>
-                        <TimeRemaining timeRemaining={proposal.timeRemaining} />
-                      </Grid>
-                      <Grid item xs={12}>
-                        <Button
-                          color="secondary"
-                          variant="contained"
-                          fullWidth
-                          onClick={() => {
-                            showProposalPanel(proposal);
-                          }}>
-                          Show Details
-                        </Button>
+                      <TimeRemaining showRedButton={false} proposal={proposal} showProposalPanel={showProposalPanel} timeRemaining={1000} />
                       </Grid>
                       <Grid item xs={12}>
                         <User address={proposal.proposedBy} marginTop="20px" />
