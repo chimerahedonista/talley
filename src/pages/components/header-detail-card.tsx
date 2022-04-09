@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, CardContent } from "@mui/material";
+import { Button, Card, CardContent, Grid } from "@mui/material";
 import Header from "./header";
 import { Link } from "react-router-dom";
 
@@ -43,21 +43,27 @@ export interface Props {
 const HeaderDetailCard = (props: Props) => {
   const { header, details } = props;
   return (
-    <Card className="purple-card with-margin with-border" variant="outlined">
-      <CardContent>
-        <Header color="#A8A8A8" variant={props.variantHeader}>
-          {header}
-        </Header>
-        <Header variant={props.variantDetails}>{details}</Header>
-        {props.action && (
+    <Grid container>
+      <Grid item xs={12}>
+        <Card className="purple-card with-margin with-border" variant="outlined">
+          <CardContent sx={{marginBottom: "20px"}}>
+            <Header color="#A8A8A8" variant={props.variantHeader}>
+              {header}
+            </Header>
+            <Header variant={props.variantDetails}>{details}</Header>
+          </CardContent>
+        </Card>
+      </Grid>
+      {props.action && (
+        <Grid item xs={12} >
           <Link to="/govover">
-            <Button variant="contained" color="secondary" fullWidth sx={{ marginTop: "10px" }}>
+            <Button variant="contained" color="secondary" fullWidth sx={{ marginTop: "-61px", borderRadius: "20px" }}>
               {props.action}
             </Button>
           </Link>
-        )}
-      </CardContent>
-    </Card>
+        </Grid>
+      )}
+    </Grid>
   );
 };
 
