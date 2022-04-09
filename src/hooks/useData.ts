@@ -10,7 +10,7 @@ export const useData = () => {
   const data: any = [];
   populated.forEach((x: any) => {
     const y = cloneDeep(x);
-    const rand = Math.floor(Math.random() * 3);
+    const rand = Math.floor(Math.random() * statuses.length);
     const _for = Math.floor(Math.random() * 100);
     const against = Math.floor(Math.random() * 100);
     const abstain = Math.floor(Math.random() * 100);
@@ -21,11 +21,8 @@ export const useData = () => {
     y.votes.against = against;
     y.votes.abstain = abstain;
 
-    console.log(y);
-    console.log(y);
     data.push(y);
   });
 
-  console.log(data);
   return data;
 };

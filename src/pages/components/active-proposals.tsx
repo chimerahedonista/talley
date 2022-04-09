@@ -18,25 +18,25 @@ const ActiveProposals = (props: Props) => {
     <Fragment>
       <Card className="grey-card" variant="outlined">
         <CardContent>
-          <Header variant="h5">{headerText}</Header>
+          <Header variant="h6">{headerText}</Header>
           {proposals.map((proposal: any) => (
             <Card
             className="purple-card with-margin"
             variant="outlined"
             key={proposal.id}>
             <CardContent>
-              <Grid container spacing={5} style={{ marginTop: "20px" }}>
+              <Grid container spacing={5} style={{ marginTop: "2px" }}>
                 <Grid item xs={6} sx={{ padding: "5px" }}>
                   <Grid container spacing={2}>
-                    <Grid item xs={6} sx={{ float: "left" }}>
+                    <Grid item xs={6}>
                       #{proposal.id}
                     </Grid>
-                    <Grid item xs={6} sx={{ float: "right" }}>
+                    <Grid item xs={6} sx={{ textAlign: "right" }}>
                       <Status status={proposal.status} />
                     </Grid>
 
                       <Grid item xs={12}>
-                        <Header variant="h4">{proposal.title}</Header>
+                        <Header variant="h5">{proposal.title}</Header>
                       </Grid>
                       <Grid item xs={12}>
                         <Header variant="body1">{proposal.description}</Header>
@@ -52,7 +52,7 @@ const ActiveProposals = (props: Props) => {
 
                   <Grid item xs={1} sx={{ borderLeft: "1px solid grey" }}></Grid>
 
-                  <Grid item xs={5}>
+                  <Grid item xs={5} sx={{marginLeft: "-55px"}}>
                     <ProgressWithLabel color="success" label="For" value={proposal.votes.for} />
                     <ProgressWithLabel color="error" label="Against" value={proposal.votes.against} />
                     <ProgressWithLabel color="warning" label="Abstain" value={proposal.votes.abstain} />

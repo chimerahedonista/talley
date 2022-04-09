@@ -7,6 +7,7 @@ export interface Props {
 
 const Status = (props: Props) => {
   const [color, setColor] = useState<"inherit" | "primary" | "secondary" | "success" | "error" | "info" | "warning" | undefined>();
+  const [variant, setVariant] = useState<"outlined"|"contained"|undefined>("contained")
   const { status } = props;
 
   useEffect(() => {
@@ -17,6 +18,7 @@ const Status = (props: Props) => {
           break;
         case "PENDING":
           setColor("info");
+          setVariant("outlined");
           break;
         case "PASSED":
           setColor("success");
@@ -34,7 +36,7 @@ const Status = (props: Props) => {
   }, [status]);
 
   return (
-    <Button variant="contained" color={color} size="small" sx={{ cursor: "none", pointerEvents: "none" }}>
+    <Button variant={variant} color={color} size="small" sx={{ cursor: "none", pointerEvents: "none", borderRadius: "10px" }}>
       {status}
     </Button>
   );

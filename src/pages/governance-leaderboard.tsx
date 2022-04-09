@@ -17,7 +17,7 @@ const GovernanceLeaderboard = () => {
 
   return (
     <Fragment>
-      <Header variant="h3">Governance Overview</Header>
+      <Header variant="h5">Governance Overview</Header>
       <Grid container spacing={2} style={{ marginTop: "20px" }}>
         <Grid item xs={4}>
           <GovernanceStats />
@@ -25,7 +25,7 @@ const GovernanceLeaderboard = () => {
         <Grid item xs={8}>
           <Card sx={{ minWidth: "100%", backgroundColor: "#202230", color: "white", borderRadius: 5 }} variant="outlined">
             <CardContent>
-              <Header variant="h5">Leaderboard</Header>
+              <Header variant="h6">Leaderboard</Header>
               <TableContainer component={Paper} sx={{ backgroundColor: "#15081D", marginTop: "10px", borderRadius: 5 }}>
                 <Table>
                   <TableHead>

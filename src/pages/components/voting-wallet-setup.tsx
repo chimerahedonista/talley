@@ -12,10 +12,10 @@ const VotingWalletSetup = (props: Props) => {
   return (
     <Card sx={{ minWidth: "100%", backgroundColor: "#202230", color: "white", borderRadius: 5 }} variant="outlined">
       <CardContent>
-        <Header variant="h5">{headerText}</Header>
+        <Header variant="h6">{headerText}</Header>
         <HeaderDetailCard variantHeader="h6" variantDetails="h4" header="xSUSHI / SUSHI-ETH balance" details="0.000000000" />
         <HeaderDetailCard
-          variantHeader="h5"
+          variantHeader="h6"
           variantDetails="body1"
           header="Voting Set-up"
           details="You can either vote on each proposal yourself or delegate your votes to a third party. Sushi Governance puts you in charge of the future of Sushi. Learn more."
