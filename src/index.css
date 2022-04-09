@@ -37,6 +37,10 @@ code {
   /* {{ minWidth: "100%", backgroundColor: "#15081D", color: "white", border: 1, borderRadius: 5, marginTop: "10px" }}   */
 }
 
+.with-margin-bottom {
+  margin-bottom: 10px !important;  
+}
+
 .with-margin {
   margin-top: 10px !important;  
 }
@@ -45,4 +49,12 @@ code {
   border-style: solid !important;
   border-width: 1px !important;
   border-color: white !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.greyed-out {
+  color: grey !important;
 }

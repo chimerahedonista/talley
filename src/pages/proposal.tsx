@@ -1,10 +1,13 @@
-import { Button, Grid } from "@mui/material";
+import { Button, Card, CardContent, Grid } from "@mui/material";
 import React, { Fragment } from "react";
-import ForAgainstCard from "./components/for-against-card";
 import Header from "./components/header";
+import ForAgainstCard from "./components/proposal/for-against-card";
+import ProposalHistory from "./components/proposal/history";
+import Information from "./components/proposal/information";
 import Status from "./components/status";
 import TimeRemaining from "./components/time-remaining";
 import User from "./components/user";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export interface Props {
   data: any;
@@ -18,15 +21,12 @@ const Proposal = (props: Props) => {
       {data && (
         <Fragment>
           <Grid container spacing={5} style={{ marginTop: "1px" }}>
-            <Grid item xs={12}>
-              <Grid container spacing={5} style={{ marginTop: "20px" }}>
-                <Grid item xs={4}>
-                  <Button color="secondary" variant="contained" fullWidth onClick={back}>
-                    Back
-                  </Button>
-                </Grid>
-              </Grid>
+            <Grid item xs={1}>
+              <Button onClick={back}>
+                <ArrowBackIcon />
+              </Button>
             </Grid>
+            <Grid item xs={11}></Grid>
             <Grid item xs={1}>
               #{data.id}
             </Grid>
@@ -51,8 +51,30 @@ const Proposal = (props: Props) => {
           </Grid>
 
           <Grid container spacing={5} style={{ marginTop: "1px" }}>
-            <Grid item xs={4}>
-              <ForAgainstCard votersFor={data.voters.for} votersAgainst={data.voters.against} />
+            <Grid item xs={5}>
+              <Grid container>
+                <Grid item xs={12}>
+                  <ForAgainstCard votersFor={data.voters.for} votersAgainst={data.voters.against} />
+                </Grid>
+                <Grid item xs={12}>
+                  <Information data={data} />
+                </Grid>
+                <Grid item xs={12}>
+                  <ProposalHistory data={data} />
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item xs={7}>
+              <Card className="grey-card" variant="outlined">
+                <CardContent>
+                  <Header variant="h5">Proposal Details</Header>
+                  <Card className="purple-card with-border with-margin" variant="outlined">
+                    <CardContent>
+                      <div dangerouslySetInnerHTML={{ __html: data.details }} />
+                    </CardContent>
+                  </Card>
+                </CardContent>
+              </Card>
             </Grid>
           </Grid>
         </Fragment>
