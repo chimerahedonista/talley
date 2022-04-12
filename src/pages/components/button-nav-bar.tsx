@@ -8,7 +8,6 @@ import IconButton from "@mui/material/IconButton";
 import CameraIcon from "@mui/icons-material/Camera";
 import { Link, Outlet } from "react-router-dom";
 import { Container, FormControl, MenuItem, Select, SelectChangeEvent } from "@mui/material";
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export default function ButtonNavBar() {
   const [lang, setLang] = React.useState("english");

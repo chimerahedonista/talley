@@ -70,7 +70,7 @@ const Proposal = (props: Props) => {
                   <Header variant="h5">Proposal Details</Header>
                   <Card className="purple-card with-border with-margin" variant="outlined">
                     <CardContent>
-                      <div dangerouslySetInnerHTML={{ __html: data.details }} />
+                      <div style={{padding: "35px"}} dangerouslySetInnerHTML={{ __html: data.details }} />
                     </CardContent>
                   </Card>
                 </CardContent>

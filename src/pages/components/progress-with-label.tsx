@@ -8,17 +8,17 @@ export interface Props extends LinearProgressProps {
 
 const ProgressWithLabel = (props: Props) => {
   return (
-    <Grid container spacing={5} style={{ marginTop: "1px" }}>
-      <Grid item xs={12}>
+    <Grid container spacing={1} style={{ marginTop: "1px", marginBottom: "80px" }}>
+      <Grid item xs={8}>
         <Typography variant="body2" color="white">
           {props.label}
         </Typography>
       </Grid>
-      <Grid item xs={8}>
-        <LinearProgress variant="determinate" color={props.color} {...props} />
-      </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={4} sx={{textAlign: "right"}}>
         <Typography variant="body2" color="white">{`${Math.round(props.value)}%`}</Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <LinearProgress variant="determinate" color={props.color} {...props} />
       </Grid>
     </Grid>
   );

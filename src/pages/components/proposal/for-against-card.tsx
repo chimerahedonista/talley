@@ -1,6 +1,5 @@
 import { Button, Card, CardContent, Grid } from "@mui/material";
 import React, { Fragment, useState } from "react";
-import Header from "../header";
 
 export interface Props {
   votersFor: Array<{ address: string; votes: number }>;

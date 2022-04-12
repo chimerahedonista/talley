@@ -38,10 +38,10 @@ const GovernanceLeaderboard = () => {
                   <TableBody>
                     {table.map((row: any, i) => (
                       <TableRow key={i}>
-                        <TableCell sx={{ color: "white", borderBottom: "none" }}>{row.rank}</TableCell>
+                        <TableCell sx={{ color: "white", borderBottom: "none", textAlign: "center" }}>{row.rank}</TableCell>
                         <TableCell sx={{ color: "white", borderBottom: "none" }}>{row.address}</TableCell>
-                        <TableCell sx={{ color: "white", borderBottom: "none" }}>{row.voteWeight}</TableCell>
-                        <TableCell sx={{ color: "white", borderBottom: "none" }}>{row.proposalsVoted}</TableCell>
+                        <TableCell sx={{ color: "white", borderBottom: "none", textAlign: "center" }}>{row.voteWeight}</TableCell>
+                        <TableCell sx={{ color: "white", borderBottom: "none", textAlign: "center" }}>{row.proposalsVoted}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>

@@ -46,7 +46,7 @@ const HeaderDetailCard = (props: Props) => {
     <Grid container>
       <Grid item xs={12}>
         <Card className="purple-card with-margin with-border" variant="outlined">
-          <CardContent sx={{marginBottom: "20px"}}>
+          <CardContent sx={{marginBottom: props.action ? "20px" : "0px"}}>
             <Header color="#A8A8A8" variant={props.variantHeader}>
               {header}
             </Header>
